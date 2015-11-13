@@ -1,0 +1,21 @@
+ORIG_PN="gfbgraph"
+inherit gnome2
+
+NAME="gfbgraph0.2"
+VERSION=0.2.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="GObject wrapper for the Facebook Graph API"
+DESCRIPTION=${SUMMARY}
+
+PKG_NAMES="libgfbgraph0.2_0 libgfbgraph0.2-devel libgfbgraph0.2-doc girepository-GFBGraph0.2"
+libgfbgraph0_2_0_CONTENTS="usr/bin/cyggfbgraph-0.2-0.dll usr/share/doc/"
+libgfbgraph0_2_devel_CONTENTS="
+	usr/include/gfbgraph-0.2/
+	usr/lib/libgfbgraph-0.2.dll.a
+	usr/lib/pkgconfig/libgfbgraph-0.2.pc
+"
+libgfbgraph0_2_doc_CONTENTS="usr/share/gtk-doc/html/gfbgraph-0.2/"
+girepository_GFBGraph0_2_CONTENTS="usr/*/gir*-1.0/GFBGraph-0.2.*"
+
+MAKEOPTS+=" libgfbgraphdocdir= "
